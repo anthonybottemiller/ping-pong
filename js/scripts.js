@@ -2,12 +2,15 @@ var countToNumber = function(number){
   if (number < 0){
     console.log("Please use a positive integer")
   }
-  else{
+  else {
     for (numberCount=1; numberCount <= number; numberCount++){
       if (numberCount % 3 === 0) {
         console.log("Ping")
       }
-      else{
+      else if (numberCount % 5 === 0){
+        console.log("Pong")
+      }
+      else {
         console.log(numberCount)
       }
     }
