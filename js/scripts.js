@@ -1,23 +1,30 @@
 var countToNumber = function(number){
   if (number < 0){
-    console.log("Please use a positive integer")
+    outputArray.push("Please use a positive integer");
   }
   else {
-    for (numberCount=1; numberCount <= number; numberCount++){
+    for (var numberCount=1; numberCount <= number; numberCount++){
       if (numberCount % 15 === 0) {
-        console.log("Ping-Pong");
+        outputArray.push("Ping-Pong");
       }
       else if (numberCount % 3 === 0){
-        console.log("Ping");
+        outputArray.push("Ping");
       }
       else if (numberCount % 5 === 0){
-        console.log("Pong");
+        outputArray.push("Pong");
       }
       else {
-        console.log(numberCount)
+        outputArray.push(numberCount);
       }
     }
-  }
+  };
+  return outputArray;
+};
+//Global Output Array
+var outputArray = [];
+
+var writeToPage = function(array){
+
 }
 
 $(document).ready(function(){
@@ -27,5 +34,6 @@ $(document).ready(function(){
     var inputNumber = $("input").val();
     console.log(inputNumber);
     countToNumber(inputNumber);
+    console.log(outputArray);
   });
 });
