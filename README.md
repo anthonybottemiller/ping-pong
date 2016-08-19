@@ -32,6 +32,7 @@ This page is intended to take any positive integer from a user and respond with 
 * While counting up if number is divisible by *15* respond with **"ping-pong"**
     * **Example Input**: 15
     * **Example Output**: [1,2,Ping,4,Pong,Ping,7,8,Ping,Pong,11,Ping,13,14,Ping-Pong]
+    
 ##Technologies Used
 
 * HTML
