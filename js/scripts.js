@@ -4,11 +4,14 @@ var countToNumber = function(number){
   }
   else {
     for (numberCount=1; numberCount <= number; numberCount++){
-      if (numberCount % 3 === 0) {
-        console.log("Ping")
+      if (numberCount % 15 === 0) {
+        console.log("Ping-Pong");
+      }
+      else if (numberCount % 3 === 0){
+        console.log("Ping");
       }
       else if (numberCount % 5 === 0){
-        console.log("Pong")
+        console.log("Pong");
       }
       else {
         console.log(numberCount)
@@ -16,6 +19,7 @@ var countToNumber = function(number){
     }
   }
 }
+
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
