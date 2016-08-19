@@ -18,25 +18,32 @@ var countToNumber = function(number){
       }
     }
   };
-  return outputArray;
+  numberOfResults += 1;
 };
-//Global Output Array
-var outputArray = [];
-var writeDiv = function(resultNumber){
-  $("#results").prepend('<div id=result'resultNumber' class ="col-md-3"><ul></ul></div>')
-}
+var writeDiv = function(){
+  $("#results").prepend('<div id=result'+numberOfResults+' class ="col-md-3"><ul></ul></div>');
+};
+var writeToResult = function(outputNumber){
+  $("#result"+numberOfResults).append("<li>"+outputNumber+"</li>");
+};
 
 var writeToPage = function(array){
+  writeDiv();
+  for (i=0; i<outputArray.length; i++){
+    writeToResult(numberOfResults,outputArray[i]);
+  }
 
 }
-
+//Global Output Array
+var outputArray = [];
+var numberOfResults = 0;
 $(document).ready(function(){
   $("form").submit(function(event){
     event.preventDefault();
     console.log("Button Clicked");
     var inputNumber = $("input").val();
     console.log(inputNumber);
-    countToNumber(inputNumber);
-    console.log(outputArray);
+    var outputArray = countToNumber(inputNumber);
+    writeToPage(outputArray);
   });
 });
