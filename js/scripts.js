@@ -16,24 +16,26 @@ var countToNumber = function(number){
       else {
         outputArray.push(numberCount);
       }
-    }
+    };
   };
   numberOfResults += 1;
 };
 var writeDiv = function(){
   $("#results").prepend('<div id=result'+numberOfResults+' class ="col-md-3"><ul></ul></div>');
 };
+var writeHeader = function(){
+  $("#result"+numberOfResults).append("<h3>Result: "+numberOfResults+"</h3>");
+};
 var writeToResult = function(outputNumber){
   $("#result"+numberOfResults).append("<li>"+outputNumber+"</li>");
 };
-
 var writeToPage = function(array){
   writeDiv();
+  writeHeader();
   for (i=0; i<outputArray.length; i++){
-    writeToResult(numberOfResults,outputArray[i]);
-  }
-
-}
+    writeToResult(outputArray[i]);
+  };
+};
 //Global Output Array
 var outputArray = [];
 var numberOfResults = 0;
