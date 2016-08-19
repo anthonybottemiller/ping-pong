@@ -13,7 +13,7 @@ This page is intended to take any positive integer from a user and respond with 
 
 ##Link
 
-[Click here to view](#)
+[Click here to view](https://anthonybottemiller.github.io/ping-pong/)
 
 ##Specifications
 
