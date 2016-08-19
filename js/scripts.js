@@ -1,3 +1,4 @@
+//Backend Function
 var countToNumber = function(number){
   outputArray.length = 0;
   if (number < 0){
@@ -21,7 +22,8 @@ var countToNumber = function(number){
   };
   numberOfResults += 1;
 };
-var writeDiv = function(){
+//Front end Functions
+var writeResultDiv = function(){
   $(".results").prepend('<div id=result'+numberOfResults+' class = "single-result col-md-2"><ul></ul></div>');
 };
 var writeHeader = function(){
@@ -31,17 +33,19 @@ var writeToResult = function(outputNumber){
   $("#result"+numberOfResults).append("<li>"+outputNumber+"</li>");
 };
 var writeToPage = function(array){
-  writeDiv();
+  writeResultDiv();
   writeHeader();
   console.log(outputArray)
   for (i=0; i<outputArray.length; i++){
     writeToResult(outputArray[i]);
   };
 };
-//Global Output Array
+//Global Variables
 var outputArray = [];
 var numberOfResults = 0;
+//When Document is ready
 $(document).ready(function(){
+//When go button clicked  
   $("form").submit(function(event){
     event.preventDefault();
     console.log("Button Clicked");
