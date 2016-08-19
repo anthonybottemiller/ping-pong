@@ -22,6 +22,9 @@ var countToNumber = function(number){
 };
 //Global Output Array
 var outputArray = [];
+var writeDiv = function(resultNumber){
+  $("#results").prepend('<div id=result'resultNumber' class ="col-md-3"><ul></ul></div>')
+}
 
 var writeToPage = function(array){
 
