@@ -16,7 +16,7 @@ var countToNumber = function(number){
       }
       else {
         outputArray.push(numberCount);
-      }
+      };
     };
   };
   numberOfResults += 1;

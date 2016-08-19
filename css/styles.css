@@ -1,6 +1,7 @@
 body {
   color: white;
   background-color: #FF19B7;
+  text-shadow: 2px 2px black;
 }
 
 input {
@@ -21,6 +22,7 @@ button {
   background-color: #2BB216;
   border: solid #2BB216 10px; 
   border-radius: 20px;
+  box-shadow: 5px 5px black;
 }
 
 .single-result h3 {
