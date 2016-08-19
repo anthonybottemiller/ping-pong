@@ -23,7 +23,7 @@ var countToNumber = function(number){
   numberOfResults += 1;
 };
 //Front end Functions
-var writeDiv = function(){
+var writeResultDiv = function(){
   $(".results").prepend('<div id=result'+numberOfResults+' class = "single-result col-md-2"><ul></ul></div>');
 };
 var writeHeader = function(){
@@ -33,7 +33,7 @@ var writeToResult = function(outputNumber){
   $("#result"+numberOfResults).append("<li>"+outputNumber+"</li>");
 };
 var writeToPage = function(array){
-  writeDiv();
+  writeResultDiv();
   writeHeader();
   console.log(outputArray)
   for (i=0; i<outputArray.length; i++){
