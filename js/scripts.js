@@ -1,3 +1,4 @@
+//Backend Function
 var countToNumber = function(number){
   outputArray.length = 0;
   if (number < 0){
@@ -21,6 +22,7 @@ var countToNumber = function(number){
   };
   numberOfResults += 1;
 };
+//Front end Functions
 var writeDiv = function(){
   $(".results").prepend('<div id=result'+numberOfResults+' class = "single-result col-md-2"><ul></ul></div>');
 };
@@ -38,10 +40,12 @@ var writeToPage = function(array){
     writeToResult(outputArray[i]);
   };
 };
-//Global Output Array
+//Global Variables
 var outputArray = [];
 var numberOfResults = 0;
+//When Document is ready
 $(document).ready(function(){
+//When go button clicked  
   $("form").submit(function(event){
     event.preventDefault();
     console.log("Button Clicked");
