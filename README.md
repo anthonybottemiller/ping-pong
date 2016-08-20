@@ -18,8 +18,8 @@ This page is intended to take any positive integer from a user and respond with 
 ##Specifications
 
 * It responds to negative integers (bad input).
-    * <b>Example Input</b>: -162
-    * <b>Example Output</b>: "Please enter a **Positive** integer!"
+    * **Example Input**: -162
+    * **Example Output**: "Please enter a **Positive** integer!"
 * It can count up to a *positive* integer given by the user.
     * **Example Input**: 7
     * **Example Output**: [1,2,3,4,5,6,7]
