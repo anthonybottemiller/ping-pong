@@ -2,7 +2,7 @@
 
 #####This project takes a number, counts up to it, and responds with ping, pong, or both.
 
-#####By Anthony J Bottemiller, 8-19-2016
+#####By Anthony J Bottemiller, 8-21-2016
 
 ##Description
 This page is intended to take any positive integer from a user and respond with either ping, pong, or both based on divisibility.
