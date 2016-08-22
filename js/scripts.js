@@ -1,7 +1,7 @@
 //Backend Function
 var countToNumber = function(number){
   outputArray.length = 0;
-  if (number < 0){
+  if (number <= 0){
     outputArray.push("Please use a positive integer");
   }
   else {
