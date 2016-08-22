@@ -1,7 +1,7 @@
 //Backend Function
 var countToNumber = function(number){
   outputArray.length = 0;
-  if (number < 0){
+  if (number <= 0){
     outputArray.push("Please use a positive integer");
   }
   else {
@@ -35,7 +35,6 @@ var writeToResult = function(outputNumber){
 var writeToPage = function(array){
   writeResultDiv();
   writeHeader();
-  console.log(outputArray)
   for (i=0; i<outputArray.length; i++){
     writeToResult(outputArray[i]);
   };
@@ -45,12 +44,10 @@ var outputArray = [];
 var numberOfResults = 0;
 //When Document is ready
 $(document).ready(function(){
-//When go button clicked  
+//When go button clicked
   $("form").submit(function(event){
     event.preventDefault();
-    console.log("Button Clicked");
     var inputNumber = $("input").val();
-    console.log(inputNumber);
     var outputArray = countToNumber(inputNumber);
     writeToPage(outputArray);
   });
